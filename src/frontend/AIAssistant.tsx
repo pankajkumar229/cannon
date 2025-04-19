@@ -14,7 +14,7 @@ interface WebSocketMessage {
 }
 
 const AIAssistant: React.FC = () => {
-  const [socket, setSocket] = useState<WebSocket | null>(null);
+  const [socket,  setSocket ] = useState<WebSocket | null>(null);
   const [sessionId, setSessionId] = useState<string>('');
   const [isConnected, setIsConnected] = useState(false);
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
@@ -69,19 +69,24 @@ const AIAssistant: React.FC = () => {
   };
 
   return (
-    <div className="ai-assistant">
-      <div className="status">
+    <div className="ai-assistant" style={{ padding: '20px' }}>
+      <div className="status" style={{ marginBottom: '10px' }}>
         Connection Status: {isConnected ? 'Connected' : 'Disconnected'}
       </div>
       {analysis && (
-        <div className="analysis-results">
-          <h3>Analysis Results</h3>
+        <div className="analysis-results" style={{ 
+          backgroundColor: '#f5f5f5',
+          padding: '15px',
+          borderRadius: '5px',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+        }}>
+          <h3 style={{ marginTop: 0 }}>Analysis Results</h3>
           {analysis.suggestions.length > 0 && (
             <div className="suggestions">
               <h4>Suggestions</h4>
-              <ul>
+              <ul style={{ paddingLeft: '20px' }}>
                 {analysis.suggestions.map((suggestion, index) => (
-                  <li key={index}>{suggestion}</li>
+                  <li key={index} style={{ marginBottom: '5px' }}>{suggestion}</li>
                 ))}
               </ul>
             </div>
@@ -89,9 +94,9 @@ const AIAssistant: React.FC = () => {
           {analysis.completions.length > 0 && (
             <div className="completions">
               <h4>Completions</h4>
-              <ul>
+              <ul style={{ paddingLeft: '20px' }}>
                 {analysis.completions.map((completion, index) => (
-                  <li key={index}>{completion}</li>
+                  <li key={index} style={{ marginBottom: '5px' }}>{completion}</li>
                 ))}
               </ul>
             </div>

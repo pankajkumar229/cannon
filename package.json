@@ -9,7 +9,7 @@
     "url": "https://github.com/pankajkumar229/cannon.git"
   },
   "engines": {
-    "vscode": "^1.60.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
     "Programming Languages",
@@ -17,13 +17,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:ai-code-assistant.start",
-    "onLanguage:javascript",
-    "onLanguage:typescript",
-    "onLanguage:python",
-    "onLanguage:java",
-    "onLanguage:cpp",
-    "onLanguage:csharp"
+    "*",
+    "onWebviewPanel:aiAssistant"
   ],
   "main": "./dist/extension.js",
   "contributes": {
