@@ -17,7 +17,7 @@
     "Other"
   ],
   "activationEvents": [
-    "*",
+    "onStartupFinished",
     "onWebviewPanel:aiAssistant"
   ],
   "main": "./dist/extension.js",
