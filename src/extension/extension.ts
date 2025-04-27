@@ -34,7 +34,7 @@ async function startAIAssistant(context: vscode.ExtensionContext) {
         <meta http-equiv="Content-Security-Policy" content="default-src 'none';
           style-src ${panel.webview.cspSource} 'unsafe-inline';
           script-src ${panel.webview.cspSource} https://unpkg.com 'unsafe-inline';
-          connect-src ws://localhost:3000 https://unpkg.com;">
+          connect-src ws://localhost:3001 https://unpkg.com;">
         <title>AI Code Assistant</title>
       </head>
       <body>

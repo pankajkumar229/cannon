@@ -25,7 +25,7 @@ const AIAssistant: React.FC = () => {
     setSessionId(newSessionId);
 
     // Connect to the WebSocket server
-    const ws = new WebSocket(`ws://localhost:3000/ws/${newSessionId}`);
+    const ws = new WebSocket(`ws://localhost:3001/ws/${newSessionId}`);
     setSocket(ws);
 
     ws.onopen = () => {
